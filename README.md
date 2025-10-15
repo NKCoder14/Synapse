@@ -17,7 +17,7 @@ A modern, single-page, responsive website for the Synapse National-Level112-Hour
 
 .
 ├── app/                # Next.js App Router (pages, layouts)
-│   ├── problem-statements/ # Example of a new page
+│   ├── layout.tsx      # Root layout for the application
 │   └── page.tsx        # Main homepage component
 ├── assets/             # Local assets (fonts, images)
 ├── components/         # Reusable React components
