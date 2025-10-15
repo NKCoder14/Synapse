@@ -1,6 +1,6 @@
 "use client"
 import Link from "next/link"
-import { Rocket, Menu, Sparkles } from "lucide-react"
+import { Menu, Sparkles } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { useState, useEffect } from "react"
@@ -79,7 +79,6 @@ export default function Header() {
               <SheetContent side="right" className="w-full max-w-xs glass border-l border-white/10 p-6">
                 <div className="flex flex-col space-y-6">
                   <Link href="/" className="flex items-center gap-2 mb-6" onClick={closeMobileMenu}>
-                    <Rocket className="h-7 w-7 text-primary" />
                     <span className="text-xl font-heading font-bold text-foreground">Synapse</span>
                   </Link>
                   {navItems.map((item) => (
