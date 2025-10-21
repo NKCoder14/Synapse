@@ -19,7 +19,7 @@ export default function HeroSection() {
         <div className="mb-10 animate-fade-in-up relative" style={{ animationDelay: "0.2s" }}>
           <div className="glass-card rounded-2xl p-6 mx-auto max-w-2xl">
             <AnimatedGradientText
-              text="Code. Create. Hire"
+              text="Where Innovation Meets Opportunity"
               className="text-2xl md:text-4xl font-heading font-semibold"
             />
           </div>

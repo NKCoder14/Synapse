@@ -1,4 +1,4 @@
-import { Linkedin, Instagram, Facebook, Mail, Phone, MapPin } from "lucide-react"
+import { Linkedin, Instagram, Facebook, Globe, Mail, Phone, MapPin } from "lucide-react"
 
 export default function Footer() {
 
@@ -10,7 +10,7 @@ export default function Footer() {
             <div className="flex items-center gap-2 mb-4">
               <span className="text-xl font-heading font-bold text-foreground">Synapse</span>
             </div>
-            <p className="text-sm text-muted-foreground text-center md:text-left">Code. Create. Hire</p>
+            <p className="text-sm text-muted-foreground text-center md:text-left">Where Innovation Meets Opportunity</p>
           </div>
 
           <div className="flex flex-col items-center md:items-start">
@@ -26,6 +26,12 @@ export default function Footer() {
                 <Phone className="h-4 w-4 text-primary" />
                 <a href="tel:+919611491844" className="hover:text-primary transition-colors">
                   +91 96114 91844
+                </a>
+              </div>
+              <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                <Globe className="h-4 w-4 text-primary" />
+                <a href="http://careertribe.co.in/" className="hover:text-primary transition-colors">
+                  Main Website
                 </a>
               </div>
               <div className="flex items-center gap-2 text-sm text-muted-foreground">
