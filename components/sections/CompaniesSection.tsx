@@ -3,13 +3,14 @@ import { Card, CardContent } from "@/components/ui/card"
 import Image from "next/image"
 import { Linkedin } from "lucide-react"
 import logo from "@/public/placeholder-user.jpg"
+import RGES from "@/assets/compaines/RGES.png"
 
 const CompanyMembers = [
   {
-    name: "Dr. Evelyn Reed",
-    title: "Chief Scientist, UilaTech",
-    image: logo,
-    social: { linkedin: "#" },
+    name: "Prasad Anumula",
+    title: "Founder, Risk Guard Enterprise Solutions",
+    image: RGES,
+    social: { linkedin: "https://www.linkedin.com/in/prasad-anumula/" },
   },
   {
     name: "Marcus Thorne",
@@ -55,9 +56,8 @@ export default function CompaniesSection() {
                 <Image
                   src={member.image || "/placeholder.svg"}
                   alt={`Photo of ${member.name}`}
-                  layout="fill"
-                  objectFit="cover"
-                  className="rounded-t-lg"
+                  fill
+                  className="object-contain rounded-t-lg"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
               </div>
