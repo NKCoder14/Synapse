@@ -4,23 +4,22 @@ import Image from "next/image"
 import { Linkedin } from "lucide-react"
 import logo from "@/public/placeholder-user.jpg"
 import RGES from "@/assets/compaines/RGES.png"
+import LocalView from "@/assets/compaines/LocalView.jpeg"
+import UilaTech from "@/assets/compaines/UilaTech.png"
 
 const CompanyMembers = [
   {
-    name: "Prasad Anumula",
-    title: "Founder, Risk Guard Enterprise Solutions",
+    name: "Risk Guard Enterprise Solutions",
     image: RGES,
-    social: { linkedin: "https://www.linkedin.com/in/prasad-anumula/" },
+    social: { linkedin: "https://www.linkedin.com/company/rgesindia/" },
   },
   {
-    name: "Marcus Thorne",
-    title: "Lead Engineer, LocalView Tech",
-    image: logo,
-    social: { linkedin: "#" },
+    name: "LocalView Tech",
+    image: LocalView,
+    social: { linkedin: "https://www.linkedin.com/company/localviewin/" },
   },
   {
-    name: "Aria Chen",
-    title: "CEO, Celestial Dynamics",
+    name: "UilaTech",
     image: logo,
     social: { linkedin: "#" },
   },
@@ -63,7 +62,6 @@ export default function CompaniesSection() {
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-heading font-bold text-foreground mb-1">{member.name}</h3>
-                <p className="text-sm text-primary font-medium mb-4">{member.title}</p>
                 <div className="flex justify-center space-x-4">
                   <a
                     href={member.social.linkedin}

@@ -3,11 +3,12 @@ import { Card } from "@/components/ui/card"
 import Image from "next/image"
 import Link from "next/link"
 import logo from "@/public/placeholder-user.jpg"
+import Veertrons from "@/assets/sponsors/Veertrons.jpeg"
 
 const sponsors = [
   {
-    name: "Nova Corp",
-    logo: logo,
+    name: "VEERTRONS ENGINEERING EQUIPMENT SALES AND SERVICES",
+    logo: Veertrons,
     websiteUrl: "#",
   },
   {

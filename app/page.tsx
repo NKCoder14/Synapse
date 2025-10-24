@@ -21,26 +21,32 @@ export default function Home() {
         <HeroSection />
         <AboutSection />
         <ScheduleCS/>
+        {/*
         <CompaniesSection />
-        {/*
         <DomainsSection />
-        */}
-        {/*
         <ScheduleSection />
         */}
         <DomainsCS/>
+        {/*
         <SponsorsSection/>
+        */}
         <FAQSection/>
         <section id="register" className="py-16 md:py-24 text-center bg-transparent">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl md:text-4xl font-heading font-bold tracking-tight mb-4">Ready to Join?</h2>
             <Button
+              asChild
               size="lg"
-              disabled 
-              className="text-lg px-10 py-8 rounded-full shadow-lg bg-primary/80 opacity-60 cursor-not-allowed"
+              className="text-lg px-10 py-8 rounded-full group shadow-lg shadow-primary/30 hover:shadow-primary/50 transition-all duration-300 ease-in-out transform hover:scale-105 bg-primary/90 hover:bg-primary"
             >
-              <Hourglass className="mr-3 h-6 w-6" />
-              Registrations Open Soon
+            <Link 
+              href="https://forms.gle/ZZF9TJonAVCjUYEQA"
+              target="_blank"
+              rel="nonopener noreferrer"
+            >
+                Register for Liftoff
+                <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-2 transition-transform" />
+              </Link>
             </Button>
           </div>
         </section>

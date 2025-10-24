@@ -27,13 +27,23 @@ export default function HeroSection() {
 
         <div className="animate-fade-in-up relative text-center" style={{ animationDelay: "0.4s" }}>
           <Button
-              size="lg"
-              disabled 
-              className="text-lg px-10 py-8 rounded-full shadow-lg bg-primary/80 opacity-60 cursor-not-allowed"
+            asChild
+            size="lg"
+            className="text-lg px-12 py-8 rounded-full group shadow-2xl shadow-primary/30 hover:shadow-primary/50 transition-all duration-500 ease-out transform hover:scale-105 bg-primary hover:bg-primary/90 border border-primary/20 relative overflow-hidden"
+          >
+            <Link 
+              href="https://forms.gle/ZZF9TJonAVCjUYEQA"
+              target="_blank"
+              rel="nonopener noreferrer"
             >
-              <Hourglass className="mr-3 h-6 w-6" />
-              Registrations Open Soon
-            </Button>
+              <span className="relative z-10 flex items-center">
+                <Sparkles className="mr-3 h-5 w-5" />
+                <span className="font-heading">Register for Liftoff</span>
+                <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-2 transition-transform duration-300" />
+              </span>
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/0 via-primary/20 to-primary/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
+            </Link>
+          </Button>
         </div>
 
         <p
