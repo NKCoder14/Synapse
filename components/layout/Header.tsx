@@ -12,7 +12,7 @@ const navItems = [
   { name: "Domains", href: "#domains" },
   { name: "Sponsors", href: "#sponsors" },
   { name: "FAQ", href: "#faq" },
-  { name: "Brochure", href: "/SynapseBrochure.pdf", external: true },
+  { name: "Brochure", href: "https://drive.google.com/drive/folders/1EshcOVd-IZvjCZwfwID7cBDf19sCHodw", external: true },
 ]
 
 export default function Header() {
