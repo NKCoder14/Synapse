@@ -8,9 +8,9 @@ import { useState, useEffect } from "react"
 const navItems = [
   { name: "About", href: "#about" },
   { name: "Schedule", href: "#schedule" },
-  { name: "Companies", href: "#companies" },
+  //{ name: "Companies", href: "#companies" },
   { name: "Domains", href: "#domains" },
-  { name: "Sponsors", href: "#sponsors" },
+  //{ name: "Sponsors", href: "#sponsors" },
   { name: "FAQ", href: "#faq" },
   { name: "Brochure", href: "https://drive.google.com/drive/folders/1EshcOVd-IZvjCZwfwID7cBDf19sCHodw", external: true },
 ]
