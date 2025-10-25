@@ -20,7 +20,7 @@ const faqData = [
   {
     question: "Is there a registration fee?",
     answer:
-      "Yes, there is a registration fee to cover event costs. The fee is ₹500 for a duo (team of 2) and ₹1000 for a squad (team of 3-4 members).",
+      "Yes, there is a registration fee to cover event costs. The early bird fee is ₹500 for a duo (team of 2) and ₹1000 for a squad (team of 3-4 members).",
   },
   {
     question: "What should I bring to the event?",
