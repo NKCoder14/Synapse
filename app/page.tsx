@@ -20,7 +20,7 @@ export default function Home() {
       <main className="flex-grow bg-transparent">
         <HeroSection />
         <AboutSection />
-        <ScheduleCS/>
+        <ScheduleSection />
         {/*
         <CompaniesSection />
         <DomainsSection />

@@ -1,80 +1,99 @@
 import { SectionContainer } from "@/components/shared/SectionContainer"
-import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card"
-import { CalendarDays, Clock, Zap } from "lucide-react"
+import { Card } from "@/components/ui/card"
+import { Award, ClipboardCheck, Coffee, Mic, Presentation, Cookie, Utensils } from "lucide-react"
 
-const scheduleEvents = [
+const scheduleData = [
   {
-    day: "The Day",
-    date: "November 15, 2025",
-    events: [
-      {
-        time: "08:00 AM",
-        title: "Opening Ceremony & Welcome",
-        description: "Kick off Galactic Hack with an inspiring opening ceremony and keynote.",
-        icon: <Zap className="h-5 w-5 text-primary" />,
-      },
-      {
-        time: "9:30 AM",
-        title: "Workshop: Intro to Quantum Entanglement APIs",
-        description: "Dive into the future of communication with our expert-led workshop.",
-        icon: <Zap className="h-5 w-5 text-primary" />,
-      },
-      {
-        time: "02:00 PM",
-        title: "Team Formation & Ideation",
-        description: "Meet fellow hackers, form teams, and brainstorm project ideas.",
-        icon: <Zap className="h-5 w-5 text-primary" />,
-      },
-    ],
+    time: "08:00 AM",
+    title: "Verification of Teams",
+    description: "Welcome! Please check in at the registration desk with your team.",
+    icon: <ClipboardCheck className="h-5 w-5" />,
+  },
+  {
+    time: "09:00 AM",
+    title: "Inauguration of Synapse",
+    description: "Official kickoff, keynote speeches, and the grand reveal of the problem statements.",
+    icon: <Mic className="h-5 w-5" />,
+  },
+  {
+    time: "11:00 AM",
+    title: "Tea Break",
+    description: "A quick break to refuel with tea and snacks.",
+    icon: <Coffee className="h-5 w-5" />,
+  },
+  {
+    time: "01:00 PM",
+    title: "Working Lunch",
+    description: "Lunch will be served. You can continue working with your team.",
+    icon: <Utensils className="h-5 w-5" />,
+  },
+  {
+    time: "04:30 PM",
+    title: "Snacks",
+    description: "A quick snack break to keep the energy high.",
+    icon: <Cookie className="h-5 w-5" />,
+  },
+  {
+    time: "06:00 PM",
+    title: "Evaluation Starts",
+    description: "Our panel of judges will begin evaluating the projects.",
+    icon: <Presentation className="h-5 w-5" />,
+  },
+  {
+    time: "07:30 PM",
+    title: "Closing Ceremony",
+    description: "Announcement of winners, prize distribution, and closing remarks.",
+    icon: <Award className="h-5 w-5" />,
   },
 ]
 
 export default function ScheduleSection() {
   return (
-    <SectionContainer id="schedule" className="bg-background/50 backdrop-blur-sm">
-      <div className="text-center mb-12 md:mb-16">
-        <h2 className="text-4xl md:text-5xl font-heading font-bold tracking-tight mb-4">
-          Event <span className="text-primary">Schedule</span>
+    <SectionContainer id="schedule" className="bg-transparent">
+      <div className="text-center mb-16">
+        <h2 className="text-4xl md:text-5xl font-heading font-bold tracking-tight">
+          Event <span className="gradient-text">Schedule</span>
         </h2>
-        <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-          Follow our action-packed timeline. Don't miss a moment of Hack-a-Tribe!
+        <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          The timeline for your cosmic journey.
         </p>
       </div>
 
-      <div className="space-y-12">
-        {scheduleEvents.map((dayItem, dayIndex) => (
-          <div key={dayItem.day} className="animate-fade-in-up" style={{ animationDelay: `${dayIndex * 0.2}s` }}>
-            <div className="flex items-center gap-4 mb-6">
-              <CalendarDays className="h-8 w-8 text-primary" />
-              <div>
-                <h3 className="text-3xl font-heading font-semibold text-foreground">{dayItem.day}</h3>
-                <p className="text-md text-muted-foreground">{dayItem.date}</p>
+      <div className="relative max-w-2xl mx-auto">
+        <div className="absolute left-6 top-0 h-full w-0.5 bg-primary/30 -translate-x-1/2" />
+
+        <div className="space-y-10">
+          {scheduleData.map((item, index) => (
+            <div
+              key={index}
+              className="relative flex items-start gap-6 animate-fade-in-up"
+              style={{ animationDelay: `${index * 0.1}s` }}
+            >
+              <div className="z-10 flex-shrink-0">
+                <div className="absolute left-6 top-3 h-3 w-3 rounded-full bg-primary -translate-x-1/2" />
+                <div className="h-12 w-12 rounded-full glass-card border border-primary/20 flex items-center justify-center text-primary ml-12">
+                  {item.icon}
+                </div>
+              </div>
+              
+              <div className="w-full">
+                <Card className="glass-card shadow-lg hover:shadow-primary/20 transition-all duration-300">
+                  <div className="p-5">
+                    <p className="font-heading font-semibold text-sm text-primary mb-1">
+                      {item.time}
+                    </p>
+                    <h3 className="text-xl font-heading font-bold mb-2 text-foreground">
+                      {item.title}
+                    </h3>
+                    <p className="text-muted-foreground">
+                      {item.description}
+                    </p>
+                  </div>
+                </Card>
               </div>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {dayItem.events.map((event, eventIndex) => (
-                <Card
-                  key={event.title}
-                  className="bg-card/70 border-border/50 shadow-lg hover:shadow-primary/20 transition-shadow duration-300 flex flex-col"
-                >
-                  <CardHeader>
-                    <div className="flex items-center justify-between mb-2">
-                      <div className="flex items-center gap-2 text-sm text-primary font-medium">
-                        <Clock className="h-4 w-4" />
-                        <span>{event.time}</span>
-                      </div>
-                      {event.icon}
-                    </div>
-                    <CardTitle className="text-xl font-heading">{event.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent className="flex-grow">
-                    <CardDescription>{event.description}</CardDescription>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </SectionContainer>
   )
