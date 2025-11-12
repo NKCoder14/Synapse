@@ -5,6 +5,7 @@ import localFont2 from "next/font/local"
 import "./globals.css"
 import { cn } from "@/lib/utils"
 import ClientLayout from "@/components/layout/ClientLayout"
+import { Analytics } from "@vercel/analytics/next"
 
 const brickSans = localFont1({
   src: "../assets/fonts/BrickSans-Regular.woff2", 
@@ -32,6 +33,7 @@ export default function RootLayout({
     <html lang="en" className="dark">
       <body className={cn(brickSans.variable, brixtonRegular.variable, "antialiased font-sans bg-transparent")}>
         <ClientLayout>{children}</ClientLayout>
+        <Analytics/>
       </body>
     </html>
   )
