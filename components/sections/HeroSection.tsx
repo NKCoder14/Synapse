@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { AnimatedGradientText } from "@/components/shared/AnimatedGradientText"
-import { ArrowRight, Sparkles, Hourglass } from "lucide-react"
+import { ArrowRight, Sparkles, CalendarDays } from "lucide-react"
 import Link from "next/link"
 
 export default function HeroSection() {
@@ -23,6 +23,13 @@ export default function HeroSection() {
               className="text-2xl md:text-4xl font-heading font-semibold"
             />
           </div>
+        </div>
+        <div 
+          className="flex justify-center items-center gap-2 text-lg text-muted-foreground mb-8 animate-fade-in-up" 
+          style={{ animationDelay: "0.3s" }}
+        >
+          <CalendarDays className="h-5 w-5" />
+          <span>Last Date to Register: <span className="text-primary font-semibold">November 13, 2025</span></span>
         </div>
 
         <div className="animate-fade-in-up relative text-center" style={{ animationDelay: "0.4s" }}>

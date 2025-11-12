@@ -10,7 +10,7 @@ import DomainsSection from "@/components/sections/DomainsSection"
 import SponsorsSection from "@/components/sections/SponsorsSection"
 import FAQSection from "@/components/sections/FAQSection"
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Hourglass } from "lucide-react"
+import { ArrowRight, Hourglass , CalendarDays} from "lucide-react"
 import Link from "next/link"
 
 export default function Home() {
@@ -24,7 +24,6 @@ export default function Home() {
         {/*
         <CompaniesSection />
         <DomainsSection />
-        <ScheduleSection />
         */}
         <DomainsCS/>
         {/*
@@ -34,6 +33,10 @@ export default function Home() {
         <section id="register" className="py-16 md:py-24 text-center bg-transparent">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl md:text-4xl font-heading font-bold tracking-tight mb-4">Ready to Join?</h2>
+            <div className="flex justify-center items-center gap-2 text-lg text-muted-foreground mb-6 animate-fade-in-up">
+              <CalendarDays className="h-5 w-5" />
+              <span>Last Date to Register: <span className="text-primary font-semibold">November 13, 2025</span></span>
+            </div>
             <Button
               asChild
               size="lg"
