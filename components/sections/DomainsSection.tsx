@@ -1,4 +1,4 @@
-c:\Users\Nitesh Kalyanshetti\OneDrive\Desktop\Career Tribe\Synapse\components\sections\ScheduleSection.tsximport { SectionContainer } from "@/components/shared/SectionContainer"
+import { SectionContainer } from "@/components/shared/SectionContainer"
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Download, FileText } from "lucide-react"
@@ -23,9 +23,9 @@ export default function DomainsSection() {
           <h3 className="text-3xl font-heading font-bold mb-3">Access the Challenges</h3>
           <p className="text-muted-foreground text-lg mb-8">
             Download the official PDF to view all the detailed problem statements from our partners.
-          /</p>
+          </p>
           <Button asChild size="lg" className="group text-lg px-8 py-6 rounded-full shadow-lg shadow-primary/20 hover:scale-105 transition-transform">
-            <a href="/SynapseTracks.pdf" download>
+            <a href="/PROBLEM_STATEMENTS.pdf" download>
               <Download className="mr-3 h-5 w-5" />
               Download PDF
             </a>

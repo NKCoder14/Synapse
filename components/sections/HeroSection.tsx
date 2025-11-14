@@ -29,7 +29,7 @@ export default function HeroSection() {
           style={{ animationDelay: "0.3s" }}
         >
           <CalendarDays className="h-5 w-5" />
-          <span>Last Date to Register: <span className="text-primary font-semibold">November 13, 2025</span></span>
+          <span>Last Date to Register: <span className="text-primary font-semibold">November 14, 2025 at 1:00pm</span></span>
         </div>
 
         <div className="animate-fade-in-up relative text-center" style={{ animationDelay: "0.4s" }}>
